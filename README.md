@@ -1,19 +1,14 @@
-# Development
+# Overview
 
-Depending on your selected options, your new workspace project contains a workspace member for each platform.
-If you chose to develop with the router feature, each platform crate will have a `views` folder for your platform-specific views.
-You are provided with a `ui` crate for shared UI and if you chose to use fullstack, you will have a `server` crate for your shared server functions.
+- Each platform (mobile, desktop, web) has its own workspace member.
+- The router feature provides a views/ directory for platform-specific views.
+- The ui crate provides UI components that are shared between platforms.
+- The server create provides shared server functions.
 
-### Serving Your App
+## How to run
 
-Navigate to the platform crate of your choice:
-```bash
-cd web
 ```
-
-and serve:
-
-```bash
-dx serve
+cargo install cargo-binstall
+cargo binstall dioxus-cli
+dx serve --package web
 ```
-
